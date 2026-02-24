@@ -1,0 +1,5 @@
+name = "lawfirmkb"
+compatibility_date = "2026-02-24"
+
+# 이 줄 추가! ← 핵심
+pages_build_output_dir = "."
