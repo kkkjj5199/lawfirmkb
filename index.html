@@ -1,11 +1,34 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>법무법인 KB</title>
+  <title>카카오톡 버튼있는 메시지 전송하기</title>
+  <script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
+
 <body>
-  <h1>법무법인 KB</h1>
+  <p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. yujin</p>
+  <a id="kakao-link-btn" onclick="sendLink();">
+    <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
+  </a>
+  <script type="text/javascript">
+    Kakao.init('bda5a4218a6d4b2ca3914292739f393f');
+    function sendLink() {
+      Kakao.Share.sendCustom({
+       templateId: 129769,
+        templateArgs: {
+          title: '라이언이 즐겨먹던 바로 그 틴케이스 치즈볼',
+          description: '바라만 봐도 즐거워지는 힐링 패키지에는 시크릿 스토리가 숨어있어요.',
+
+        },
+      });
+
+
+    }
+
+
+
+  </script>
+
 </body>
+
 </html>
